@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,8 +12,13 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>ORNE Y SEBA</title>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css" />
+
+<title>ORNE Y SEBA</title>
 </head>
 <body>
     <header class="parallax" id="parallax">
@@ -188,11 +194,14 @@
               </p>
             
            <br>
-           <p>CBU PESOS:</p><br>
-            <a  data-aos="fade-up"  class="boton" onclick="copyToClipboard('0070184230004004815168')">0070184230004004815168</a> <br><br><br>
-            <p>CBU USD:</p> <br>
-            <a  data-aos="fade-up"  class="boton" onclick="copyToClipboard('0070184231004003268919')">0070184231004003268919</a> <br>
-          <br>
+          
+            <a  data-aos="fade-up"  class="boton" onclick="copyToClipboard('0070184230004004815168')">CBU PESOS</a> <br><br><br>
+            
+            <a  data-aos="fade-up"  class="boton" onclick="copyToClipboard('0070184231004003268919')">CBU USD</a> <br>
+          <br>  <br>
+          <p>Alias pesos: GRANJA.CAMPO.CAOBA <br>
+          Alias USD: CACTUS.CAMPO.GRANJA</p>
+            <br>
             <p  data-aos="fade-up" >Hace clic para copiar los datos de nuestra cuenta.
                <br> Titular: Sebastián Lopez Orange</p>
         </div>
@@ -200,7 +209,7 @@
  <div class="forms">
       <img  data-aos="fade-up"  class="icon"  src="/imgs/rsvp.png" alt="giftcard">
 
-        <form name="asistenciaform" method="POST" action="https://script.google.com/macros/s/AKfycbzPOwGptluABUdVc7MMqFmL3HstHQkcMjG3oM7XcwJcsvQYBZ5cFulQrpkwoIyVU82K/exec" class="formulario">
+        <form name="asistenciaform" method="POST" action="https://script.google.com/macros/s/AKfycbzTyb7yAzBPn1BMB09fag1PfNruDcexZn3ZVO4zImzNZWBjc4dGBTizH3nZn1j9jmRq/exec" class="formulario">
 
   <label data-aos="fade-up" class="formtitle">¿VENIS?</label>
 
@@ -218,12 +227,12 @@
   <input type="text" name="NOMBRE" placeholder="Nombre" required />
   <input type="text" name="APELLIDO" placeholder="Apellido" required />
   <input type="text" name="DIETA" placeholder="Vegano / vegetariano / celíaco / nada" required />
-  <textarea name="CANCION" placeholder="¿Asistis con acompañante? Detallá sus nombres"></textarea>
+  <textarea name="ACOMPANANTES" placeholder="¿Asistis con acompañante? Detallá sus nombres"></textarea>
 
   <button type="submit" class="boton">ENVIAR</button>
 </form>
 
-    <p data-aos="fade-up">Recordá completar un formulario por persona. <br> Hacelo antes del 07 de Agosto. <br> <br>Pensando en la comodidad de todos, <br> especialmente de los más pequeños,<br> recomendamos no concurrir con menores de 5 años.</p>
+    <p data-aos="fade-up">Recordá completar un formulario por persona. <br> Hacelo antes del 07 de Agosto.</p>
   </div>
     <div class="end">
         <div class="end-names">
@@ -250,18 +259,7 @@
         
     </footer>
 
-    
-<SCript src="./form.js"></SCript>
-<script src="./countdwon.js"></script>
-<script src="./reproductor.js"></script>
-
-<script src="script.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
- <script>
+     <script>
   document.addEventListener("DOMContentLoaded", function () {
     const audio = document.getElementById("myAudio");
 
@@ -276,45 +274,29 @@
     document.addEventListener("scroll", playOnScroll);
   });
 </script>
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelement-and-player.min.js"></script>
 
-    <script>
+ 
 
-    function copyToClipboard(text) {
-       const tempInput = document.createElement("input");
-       document.body.appendChild(tempInput);
-       tempInput.value = text;
-       tempInput.select();
-       document.execCommand("copy");
-       document.body.removeChild(tempInput);
-       alert(`Copiaste los datos de cuenta "${text}" a tu portapapeles`);
-     }
-   </script>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const headers = document.querySelectorAll(".accordion-header");
+        <script src="form.js"></script>
 
-    headers.forEach((header) => {
-      header.addEventListener("click", function () {
-        const item = this.parentElement;
-        item.classList.toggle("active");
-
-        // Cierra otros ítems si querés que solo se abra uno a la vez:
-        headers.forEach((otherHeader) => {
-          const otherItem = otherHeader.parentElement;
-          if (otherItem !== item) {
-            otherItem.classList.remove("active");
-          }
-        });
-      });
-    });
-  });
-</script>
-     
-</body>
-</html>
+       <script>
+  
+          function copyToClipboard(text) {
+             const tempInput = document.createElement("input");
+             document.body.appendChild(tempInput);
+             tempInput.value = text;
+             tempInput.select();
+             document.execCommand("copy");
+             document.body.removeChild(tempInput);
+             alert(`Copiaste los datos de cuenta "${text}" a tu portapapeles`);
+           }
+         </script>
+        <script src="reproductor.js"></script>
+        <script src="script.js"></script> 
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init();
+      </script>
+  </body>
+  </html>
